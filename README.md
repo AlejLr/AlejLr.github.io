@@ -1,7 +1,7 @@
 # Alejandro López Ruiz — Portfolio
 
 This repository hosts my personal website published via **GitHub Pages** at  
-👉 [https://alejandrolr.github.io](https://alejandrolr.github.io)
+👉 [https://AlejLr.github.io](https://AlejLr.github.io)
 
 ## Sections
 - **AI / Machine Learning** — modeling, NLP, and computer-vision projects  
