@@ -18,6 +18,7 @@ Overview of the website's architecture
 
 ## Overviw of the future webpage structure with planed projects
 
+'''
 Home
 │
 ├── AI & Machine Learning
@@ -38,3 +39,4 @@ Home
 └── Courses & Certifications
     ├── Summary + why each course was taken
     └── Skills gained
+'''
