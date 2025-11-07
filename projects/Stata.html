@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Dutch Housing Hedonic Pricing (1995–2000) | Portfolio</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <meta name="description" content="Econometrics portfolio project: Hedonic price model of Dutch housing transactions (1995–2000). Cleaned large dataset, engineered features, and built progressive OLS models with robust SEs." />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Alejandro López Ruiz</h1>
+      <p class="subtitle">Data Science | AI | Analytics | Consultancy</p>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/#ai">AI / ML</a>
+        <a href="/#ds">Data Science & Analytics</a>
+        <a href="/#bi">BI & Reports</a>
+        <a href="/#courses">Courses</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width:900px;margin:2rem auto;padding:0 1rem;">
+    <div class="breadcrumbs">
+      <a href="/">Home</a> › <a href="/#ds">Projects</a> › Dutch Housing Hedonic Pricing
+    </div>
+
+    <section class="page-hero">
+      <h1>Dutch Housing Hedonic Pricing (1995–2000)</h1>
+      <p>
+        Econometrics study quantifying how structure, location, and timing shape house prices
+        in the Netherlands. Built a progressive OLS framework to surface the most
+        decision-relevant drivers while balancing accuracy and interpretability.
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="label">Observations</div>
+          <div class="value">~130k cleaned</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Best interpretable model</div>
+          <div class="value">OLS — Model 4</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Fit (M4 / M5)</div>
+          <div class="value">R² ≈ 0.70 / 0.77</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Period</div>
+          <div class="value">1995–2000</div>
+        </div>
+      </div>
+
+      <p style="margin-top:0.8rem;">
+        <a class="btn" href="https://github.com/AlejLr/Dutch-Housing-Hedonic-Prices" target="_blank" rel="noopener">View GitHub Repository</a>
+        <a class="btn-outline" href="/assets/reports/Report_Lopez_Ruiz_Alejandro_4075315.pdf" target="_blank" rel="noopener">Read Full Report (PDF)</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>What this shows</h3>
+      <ul>
+        <li>Ability to **clean large real-estate datasets** and engineer meaningful features for valuation.</li>
+        <li>Sound **econometric modeling** with robust SEs and fixed effects for time/region.</li>
+        <li>Clear **model progression** (baseline → quality → location → temporal) to communicate trade-offs.</li>
+        <li>Well-structured **research deliverables** (reproducible code, figures, report).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Executive highlights</h3>
+      <ul>
+        <li><strong>Space & quality premiums:</strong> volume, plot size, rooms, and maintenance drive value.</li>
+        <li><strong>Location matters:</strong> urbanization and regional effects explain substantial variation.</li>
+        <li><strong>Market dynamics:</strong> longer time-on-market correlates with lower realized prices.</li>
+        <li><strong>Balanced choice:</strong> Model 4 used for interpretation (strong fit, transparent structure).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>How it was built (at a glance)</h3>
+      <ul class="meta-list">
+        <li>Data preparation: plausibility filters, percentile trimming, log transforms for skewed variables.</li>
+        <li>Modeling: OLS with robust SEs; fixed effects for year and region; incremental specifications.</li>
+        <li>Artifacts: figures, tables, and final report for rapid stakeholder review.</li>
+      </ul>
+      <p style="margin-top:0.6rem;">
+        <a class="btn-outline" href="https://github.com/AlejLr/Dutch-Housing-Hedonic-Prices" target="_blank" rel="noopener">Code & outputs</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Limitations & next steps</h3>
+      <ul class="meta-list">
+        <li>Neighborhood amenities and micro-spatial variation not directly observed.</li>
+        <li>Next: panel/spatial methods, environmental attributes, and richer accessibility data.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alejandro López Ruiz — Built with HTML & CSS for GitHub Pages</p>
+  </footer>
+</body>
+</html>
