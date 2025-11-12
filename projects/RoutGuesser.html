@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoutGuesser | Portfolio — Alejandro Lopez Ruiz</title>
+    <meta name="description" content="RoutGuesser, an interactive map-based game built with Flask, JavaScript, and Leaflet. It combines AI-inspired pathfinding, data structures, and clean API design into a full-stack, Dockerized web app deployed on Google Cloud Run." />
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Alejandro Lopez Ruiz</h1>
+            <p class="subtitle">Data Science | AI | Analytics | Consultancy</p>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/#ai">AI / ML</a>
+                <a href="/#ds">Data Science & Analytics</a>
+                <a href="/#bi">BI & Reports</a>
+                <a href="/#courses">Courses</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container" style="margin-top:2rem;">
+        <nav class="breadcrumbs" arial-label="breadcrumbs">
+            <a href="/">Home</a> > <a href="/#projects">Projects</a> > <span aria-current="page">RoutGuesser</span>
+        </nav>
+
+        <section class="page-hero" aria-labelledby="rg-title">
+            <h1 id="rg-title">RoutGuesser - Flask API + JS/Leaflet Map Game</h1>
+            <p>
+                A lightweight, containerized web app where players trace optimal routes across Leiden's city map.
+                Built around a clean JSON API and a responsive Leaflet UI. Incorporates pathfinding algorithms,
+                data structures, and full-stack development best practices. Deployed on Google Cloud Run.
+            </p>
+
+            <div class="kpi-grid" role="list">
+                <div class="kpi" role="listitem">
+                    <div class="label">Status</div>
+                    <div class="value">Finished Group Project</div>
+                </div>
+                <div class="kpi" role="listitem">
+                    <div class="label">Final Grade</div>
+                    <div class="value">8.5 / 10</div>
+                </div>
+                <div class="kpi" role="listitem">
+                    <div class="label">Code Quality Grade</div>
+                    <div class="value">10 / 10</div>
+                </div>
+                <div class="kpi" role="listitem">
+                    <div class="label">Overall Project Structure, Design and Quality</div>
+                    <div class="value">9.5 / 10</div>
+                </div>
+            </div>
+
+            <p style="margin-top:0.8rem; display:flex; flex-wrap:wrap; gap:.5rem;">
+                <a class="btn" href="#" target="_blank" rel="noopener">▶ Play Live</a>
+                <a class="btn btn-outline" href="#" target="_blank" rel="noopener">GitHub Repository</a>
+                <a class="btn btn-outline" href="/#projects">← Back to Projects</a>
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>What is RouteGuesser?</h3>
+            <p>
+                A map-based game to help new students learn Leiden's street network by
+                <em>playing</em> with real routes. The browser UI guides a player from a start to an end
+                location while a Flask backend computes the optimal route and validates each move.
+                The result is a compact, production-minded build: a single Docker image, fast startup,
+                and an API-first contract that kept a 6 person team moving in parallel.
+            </p>
+            <ul class="meta-list" aria-label="Highlights">
+                <li><strong>Purpose:</strong> introduce new students to the city through simple game play.</li>
+                <li><strong>Approach:</strong> clean JSON communication between a Leaflet UI and Flask endpoints.</li>
+                <li><strong>Outcome:</strong> delivered a complete end-to-end solution with strong software quality</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>My role within the team</h3>
+            <ul class="meta-list">
+                <li><strong>Product & UX:</strong> player flow, UI/visual design, and UX interactions.</li>
+                <li><strong>Frontend:</strong> HTML/CSS and main gameplay JavaScript (game logic, animations and server communication).</li>
+                <li><strong>API integration:</strong> designed the client-server contract; implemented appropriate request/response handling.</li>
+                <li><strong>Server glue:</strong> coordinated frontend and backend data structure alignment for cross-communication.</li>
+                <li><strong>Quality assurance:</strong> preserved code style and structure (contributed to a 10/10 code quality score).</li>
+            </ul>
+            <details>
+                <summary class="muted">Known weak spots we would have improved with more time</summary>
+                <ul class="meta-list">
+                    <li>More extensive testing and CI coverage</li>
+                    <li>Improved user onboarding and tutorial features</li>
+                    <li>Clearer UML and process documentation</li>
+                    <li>More explicit software development model in the final report</li>
+                </ul>
+            </details>
+        </section>
+
+        <section class="card">
+            <h3>Gameplay</h3>
+            <ol>
+                <li>Select difficulty and number of rounds.</li>
+                <li><code>POST /api/main</code> with <code>{ type: "start", difficulty }</code> → backend returns start/end and blocked roads.</li>
+                <li>Click white node markers to extend your path; UI calls <code>POST /api/main</code> with <code>{ type: "neighbours" }</code> to get valid moves.</li>
+                <li>Reach the destination → score calculated vs the optimal path; animated progress feedback.</li>
+                <li>Repeat for the chosen number of routes; view final summary.</li>
+            </ol>
+            <ul class="meta-list">
+                <li><strong>Scoring:</strong> <code>score = (optimal_distance / player_distance) x 100%</code> (capped at 100%).</li>
+                <li><strong>Difficulties:</strong> Easy (no blocks), Medium (~50 blocked roads), Hard (~100 + non initially known blocked roads).</li>
+                <li><strong>UI:</strong> Leaflet map centered on Leiden with start (green), end (blue), blocked roads (red).</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>API & Architecture</h3>
+            <p>
+                <strong>Stack:</strong> Flask 2.2.2 (Python 3.11), HTML5, CSS3, Vanilla JS, Leaflet.js, Flask-CORS (local dev),
+                NetworkX, NumPy, GeoJSON, Matplotlib. Deployed via Docker and Google Cloud Run.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>Results & what this demonstrates</h3>
+            <ul class="meta-list">
+                <li>Full-stack delivery: Flask API + responsive JS/Leaflet UI with smooth team collaboration.</li>
+                <li>Clean, versioned JSON contracts that kept client/server decoupled.</li>
+                <li>From local Docker to Google Cloud Run with a minimal, reliable release process.</li>
+                <li>Solid data-structure design (graph routing) with pragmatic performance.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Roadmap (post-course ideas)</h3>
+            <ul class="meta-list">
+                <li>Score persistence, sessions, and a leaderboard.</li>
+                <li>Global map support (OpenStreetMap integration).</li>
+                <li>Named POIs for popular student locations.</li>
+                <li>Automated tests + improved documentation & UML.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+    <p>© <span id="year"></span> Alejandro Lopez Ruiz — Built with HTML & CSS for GitHub Pages</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

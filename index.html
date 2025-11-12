@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Lopez Ruiz | Data Science & AI Portfolio</title>
+    <meta name="description" content="Portfolio of Alejandro Lopez Ruiz — Data Science, AI, Analytics, and Economics projects. Clean, recruiter-friendly summaries with links to code and reports.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+  <header>
     <div class="container">
       <h1>Alejandro López Ruiz</h1>
       <p class="subtitle">Data Science | AI | Analytics | Consultancy</p>
@@ -19,48 +20,57 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
-    </header>
+  </header>
 
-    <main>
-    <section id="about">
+  <main>
+    <section id="about" class="container">
       <h2>About Me</h2>
       <p>
-        I’m a Data Science and AI student passionate about applying technical skills to
+        I'm a Data Science and AI student passionate about applying technical skills to
         real-world problems. My projects combine machine learning, analytics, and
         business interpretation to create full end-to-end data solutions.
       </p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="container">
       <h2>Projects</h2>
-      <p>Here are some of the projects I am working on, classified by field:</p>
+      <p>Here are finished and working on projects, classified by field:</p>
     </section>
 
-    <section id="ai" class="field">
+    <section id="ai" class="field container">
       <h2>AI / Machine Learning</h2>
       <div class="project-card">
         <h3>Twitter Emotion Analysis</h3>
         <p>
+          <em>Work in progress</em><br>
           Sentiment & emotion classifier using transformer models. Real-time map of
           emotions and highlighted tweets.
+        </p>
+        <p>
+          <a class="btn-outline" href="https://github.com/AlejLr/twitter-emotion-analysis" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
       <div class="project-card">
         <h3>Food Recognition CNN</h3>
         <p>
+          <em>Work in progress</em><br>
           Image classification with transfer learning + Grad-CAM explainability. Deployed
           via Streamlit.
         </p>
       </div>
     </section>
 
-    <section id="ds" class="field">
+    <section id="ds" class="field container">
       <h2>Data Science & Analytics</h2>
       <div class="project-card">
         <h3>Marketing ROI Explorer</h3>
         <p>
+          <em>Work in progress</em><br>
           RFM segmentation & campaign response prediction using the iFood dataset;
           interactive dashboard and ROI report.
+        </p>
+        <p>
+          <a class="btn-outline" href="https://github.com/AlejLr/marketing-roi-explorer" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
       <div class="project-card">
@@ -76,48 +86,55 @@
       </div>
     </section>
 
-    <section id="Software" class="field">
+    <section id="Software" class="field container">
       <h2>Software Engineering</h2>
       <div class="project-card">
         <h3>RouteGuesser</h3>
         <p>
-          Explain
+          A small Flask + HTML/JS web app packaged with Docker; focuses on clean API design and
+          containerized local deployment. (Page coming soon.)
         </p>
         <p>
-          <a class="btn" href="/projects/RoutGuesser.html">Project page</a>
+          <a class="btn" href="/projects/RouteGuesser.html">Project page</a>
           <a class="btn-outline" href="https://github.com/AlejLr/RouteGuesser" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
     </section>
 
-    <section id="bi" class="field">
+    <section id="bi" class="field container">
       <h2>Business Intelligence & Reports</h2>
+      <!--
       <div class="project-card">
         <h3>Complex Solow Model Dashboard</h3>
         <p>
           Interactive macro-economics simulator with real-time data from World Bank APIs.
         </p>
       </div>
+      -->
     </section>
 
-    <section id="courses" class="field">
+    <section id="courses" class="field container">
       <h2>Courses & Certifications</h2>
       <ul>
-        <li>IBM Data Science Professional Certificate (ongoing)</li>
+        <li>IBM Data Analysis Professional Certificate (ongoing)</li>
         <li>Hugging Face LLM & Computer Vision Courses (not started yet)</li>
+        <li>IBM RAG and Agentic AI (not started yet)</li>
       </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:alej.lopez.ruiz@gmail.com">alej.lopez.ruiz@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/AlejLr" target="_blank">github.com/AlejLr</a></p>
-      <p><a href="https://www.linkedin.com/in/alejandro-lopez-967546263" target="_blank">LinkedIn</a></p>
+      <p>GitHub: <a href="https://github.com/AlejLr" target="_blank" rel="noopener">github.com/AlejLr</a></p>
+      <p><a href="https://www.linkedin.com/in/alejandro-lopez-967546263" target="_blank" rel="noopener">LinkedIn</a></p>
     </section>
-    </main>
+  </main>
 
-    <footer>
-        <p>© 2025 Alejandro López Ruiz — Built with HTML & CSS for GitHub Pages</p>
-    </footer>
+  <footer>
+    <p>© <span id="year"></span> Alejandro Lopez Ruiz — Built with GitHub Pages</p>
+  </footer>
+  <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

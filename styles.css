@@ -12,6 +12,12 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 header {
   background: var(--accent);
   color: #fff;
@@ -45,9 +51,7 @@ nav a:hover {
 }
 
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 2rem 0; /* spacing now handled per-container */
 }
 
 section {

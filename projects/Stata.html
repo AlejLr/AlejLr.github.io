@@ -103,7 +103,10 @@
   </main>
 
   <footer>
-    <p>© 2025 Alejandro López Ruiz — Built with HTML & CSS for GitHub Pages</p>
+    <p>© <span id="year"></span> Alejandro Lopez Ruiz — Built with HTML & CSS for GitHub Pages</p>
   </footer>
+  <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
