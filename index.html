@@ -10,12 +10,10 @@
 <body>
   <header>
     <div class="container">
-      <h1>Alejandro López Ruiz</h1>
+      <h1>Alejandro Lopez Ruiz</h1>
       <p class="subtitle">Data Science | AI | Analytics | Consultancy</p>
       <nav>
-        <a href="#ai">AI / ML</a>
-        <a href="#ds">Data Science & Analytics</a>
-        <a href="#bi">Business Intelligence & Reports</a>
+        <a href="#projects">Projects</a>
         <a href="#courses">Courses & Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -34,82 +32,165 @@
 
     <section id="projects" class="container">
       <h2>Projects</h2>
-      <p>Here are finished and working on projects, classified by field:</p>
-    </section>
+      <p>
+        A selection of completed, in-progress, and planned projects across AI, data science,
+        econometrics, and software engineering. Use the tags to filter by topic and tech stack.
+      </p>
 
-    <section id="ai" class="field container">
-      <h2>AI / Machine Learning</h2>
-      <div class="project-card">
-        <h3>Social Media Analyzer</h3>
-        <p>
-          Sentiment & emotion classifier using transformer models. Real-time map of
-          emotions and highlighted tweets.
-        </p>
-        <p>
-          <a class="btn-outline" href="https://github.com/AlejLr/twitter-emotion-analysis" target="_blank" rel="noopener">GitHub</a>
-        </p>
-      </div>
-      <div class="project-card">
-        <h3>Food Recognition CNN</h3>
-        <p>
-          <em>Work in progress</em><br>
-          Image classification with transfer learning + Grad-CAM explainability. Deployed
-          via Streamlit.
-        </p>
-      </div>
-    </section>
+      <div class="filter-bar" aria-label="Project filters">
+        <span class="filter-label">Filter by tag:</span>
+        <div class="tag-filter-list">
+          <button type="button" class="tag-filter" data-tag="ai-ml">AI / ML</button>
+          <button type="button" class="tag-filter" data-tag="nlp">NLP</button>
+          <button type="button" class="tag-filter" data-tag="computer-vision">Computer Vision</button>
+          <button type="button" class="tag-filter" data-tag="data-science">Data Science</button>
+          <button type="button" class="tag-filter" data-tag="analytics">Analytics</button>
+          <button type="button" class="tag-filter" data-tag="business-marketing">Business / Marketing</button>
+          <button type="button" class="tag-filter" data-tag="econometrics">Econometrics</button>
+          <button type="button" class="tag-filter" data-tag="software-engineering">Software Engineering</button>
+          <button type="button" class="tag-filter" data-tag="web-app">Web App</button>
+          <button type="button" class="tag-filter" data-tag="dashboard">Dashboard</button>
 
-    <section id="ds" class="field container">
-      <h2>Data Science & Analytics</h2>
-      <div class="project-card">
-        <h3>Marketing ROI Explorer</h3>
-        <p>
-          <em>Work in progress</em><br>
-          RFM segmentation & campaign response prediction using the iFood dataset;
-          interactive dashboard and ROI report.
-        </p>
-        <p>
-          <a class="btn-outline" href="https://github.com/AlejLr/marketing-roi-explorer" target="_blank" rel="noopener">GitHub</a>
-        </p>
-      </div>
-      <div class="project-card">
-        <h3>Dutch Housing Market Analysis</h3>
-        <p>
-          Exploratory and regression analysis with Stata to uncover housing
-          trends in the Netherlands.
-        </p>
-        <p>
-          <a class="btn" href="/projects/Stata.html">Project page</a>
-          <a class="btn-outline" href="https://github.com/AlejLr/Dutch-Housing-Hedonic-Prices" target="_blank" rel="noopener">GitHub</a>
-        </p>
-      </div>
-    </section>
+          <button type="button" class="tag-filter" data-tag="completed">Completed</button>
+          <button type="button" class="tag-filter" data-tag="planned">Planned</button>
+          <button type="button" class="tag-filter" data-tag="solo-project">Solo project</button>
+          <button type="button" class="tag-filter" data-tag="group-project">Group project</button>
 
-    <section id="Software" class="field container">
-      <h2>Software Engineering</h2>
-      <div class="project-card">
-        <h3>RouteGuesser</h3>
-        <p>
-          A small Flask + HTML/JS web app packaged with Docker; focuses on clean API design and
-          containerized local deployment. (Page coming soon.)
-        </p>
-        <p>
-          <a class="btn" href="/projects/RouteGuesser.html">Project page</a>
-          <a class="btn-outline" href="https://github.com/AlejLr/RouteGuesser" target="_blank" rel="noopener">GitHub</a>
-        </p>
+          <button type="button" class="tag-filter" data-tag="python">Python</button>
+          <button type="button" class="tag-filter" data-tag="flask">Flask</button>
+          <button type="button" class="tag-filter" data-tag="streamlit">Streamlit</button>
+          <button type="button" class="tag-filter" data-tag="docker">Docker</button>
+          <button type="button" class="tag-filter" data-tag="stata">Stata</button>
+          <button type="button" class="tag-filter" data-tag="frontend">Frontend (HTML/CSS/JS)</button>
+        </div>
+        <button type="button" class="tag-filter-clear">Clear filters</button>
       </div>
-    </section>
 
-    <section id="bi" class="field container">
-      <h2>Business Intelligence & Reports</h2>
-      <!--
-      <div class="project-card">
-        <h3>Complex Solow Model Dashboard</h3>
-        <p>
-          Interactive macro-economics simulator with real-time data from World Bank APIs.
-        </p>
+      <p class="projects-count" aria-live="polite">
+        Showing 5 of 5 projects
+      </p>
+
+      <div class="project-list">
+
+        <article class="project-card"
+                 data-title="Marketing Social Media Analyzer"
+                 data-tags="ai-ml nlp data-science analytics business-marketing dashboard completed solo-project python streamlit docker">
+          <h3>Marketing Social Media Analyzer</h3>
+          <p>
+            Multi-language social listening dashboard: scrapes Mastodon posts, translates them,
+            and runs sentiment, emotion, and toxicity analysis for marketing-style insights.
+          </p>
+          <div class="tag-list" aria-label="Tags">
+            <span class="tag-chip">AI / ML</span>
+            <span class="tag-chip">NLP</span>
+            <span class="tag-chip">Data Science</span>
+            <span class="tag-chip">Analytics</span>
+            <span class="tag-chip">Business / Marketing</span>
+            <span class="tag-chip">Dashboard</span>
+            <span class="tag-chip">Completed</span>
+            <span class="tag-chip">Solo project</span>
+            <span class="tag-chip">Python</span>
+            <span class="tag-chip">Streamlit</span>
+            <span class="tag-chip">Docker</span>
+          </div>
+          <p>
+            <a class="btn" href="/projects/SMAnalyzer.html">Project page</a>
+            <a class="btn-outline" href="https://github.com/AlejLr/Social-Media-Emotion-Analysis-Dashboard" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+
+        <article class="project-card"
+                 data-title="RouteGuesser"
+                 data-tags="software-engineering web-app frontend completed group-project python flask docker">
+          <h3>RouteGuesser</h3>
+          <p>
+            Flask + Leaflet web game where players guess optimal routes in Leiden. Focuses on a
+            clean JSON API, a responsive frontend, and a Dockerized deployment workflow.
+          </p>
+          <div class="tag-list" aria-label="Tags">
+            <span class="tag-chip">Software Engineering</span>
+            <span class="tag-chip">Web App</span>
+            <span class="tag-chip">Frontend (HTML/CSS/JS)</span>
+            <span class="tag-chip">Completed</span>
+            <span class="tag-chip">Group project</span>
+            <span class="tag-chip">Python</span>
+            <span class="tag-chip">Flask</span>
+            <span class="tag-chip">Docker</span>
+          </div>
+          <p>
+            <a class="btn" href="/projects/RouteGuesser.html">Project page</a>
+            <a class="btn-outline" href="https://github.com/AlejLr/RouteGuesser" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+
+
+        <article class="project-card"
+                 data-title="Dutch Housing Hedonic Pricing (1995-2000)"
+                 data-tags="data-science analytics econometrics completed solo-project stata">
+          <h3>Dutch Housing Hedonic Pricing (1995-2000)</h3>
+          <p>
+            Econometrics project modeling Dutch house prices with progressive OLS specifications,
+            robust SEs, and time/region effects to quantify how structure, quality, and location drive value.
+          </p>
+          <div class="tag-list" aria-label="Tags">
+            <span class="tag-chip">Data Science</span>
+            <span class="tag-chip">Analytics</span>
+            <span class="tag-chip">Econometrics</span>
+            <span class="tag-chip">Completed</span>
+            <span class="tag-chip">Solo project</span>
+            <span class="tag-chip">Stata</span>
+          </div>
+          <p>
+            <a class="btn" href="/projects/Stata.html">Project page</a>
+            <a class="btn-outline" href="https://github.com/AlejLr/Dutch-Housing-Hedonic-Prices" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+
+
+        <article class="project-card"
+                 data-title="Marketing ROI Explorer"
+                 data-tags="data-science analytics business-marketing dashboard planned python">
+          <h3>Marketing ROI Explorer</h3>
+          <p>
+            Planned dashboard for RFM segmentation and campaign response analysis using the
+            iFood dataset. The goal is to connect customer analytics with clear ROI-focused reporting.
+            <br><em>Planned / not started yet.</em>
+          </p>
+          <div class="tag-list" aria-label="Tags">
+            <span class="tag-chip">Data Science</span>
+            <span class="tag-chip">Analytics</span>
+            <span class="tag-chip">Business / Marketing</span>
+            <span class="tag-chip">Dashboard</span>
+            <span class="tag-chip">Planned</span>
+            <span class="tag-chip">Python</span>
+          </div>
+          <p>
+            <a class="btn-outline" href="https://github.com/AlejLr/marketing-roi-explorer" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+
+        <article class="project-card"
+                 data-title="Handwritten Letter Recognition"
+                 data-tags="ai-ml computer-vision planned python">
+          <h3>Handwritten Letter Recognition</h3>
+          <p>
+            Planned extension of a class assignment into a full CNN-based system for handwritten
+            letter recognition, with a focus on explainability and deployment-ready structure.
+            <br><em>Planned / not started yet.</em>
+          </p>
+          <div class="tag-list" aria-label="Tags">
+            <span class="tag-chip">AI / ML</span>
+            <span class="tag-chip">Computer Vision</span>
+            <span class="tag-chip">Planned</span>
+            <span class="tag-chip">Python</span>
+          </div>
+          <p>
+            <!-- Placeholder for future links -->
+            <!-- <a class="btn" href="/projects/handwritten-letters.html">Project page</a> -->
+            <!-- <a class="btn-outline" href="https://github.com/AlejLr/..." target="_blank" rel="noopener">GitHub Repo</a> -->
+          </p>
+        </article>
       </div>
-      -->
     </section>
 
     <section id="courses" class="field container">
@@ -132,8 +213,68 @@
   <footer>
     <p>© <span id="year"></span> Alejandro Lopez Ruiz — Built with GitHub Pages</p>
   </footer>
+
   <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function() {
+      const filterButtons = Array.from(document.querySelectorAll('.tag-filter'));
+      const clearButton = document.querySelector('.tag-filter-clear');
+      const cards = Array.from(document.querySelectorAll('.project-card'));
+      const countEl = document.querySelector('.projects-count');
+
+      const selectedTags = new Set();
+
+      function updateVisibility() {
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const tags = (card.getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+          const matches = Array.from(selectedTags).every(tag => tags.includes(tag));
+          if (selectedTags.size === 0 || matches) {
+            card.classList.remove('hidden');
+            visibleCount += 1;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        const total = cards.length;
+        if (countEl) {
+          countEl.textContent = `Showing ${visibleCount} of ${total} projects`;
+        }
+      }
+
+      function toggleTag(tag, button) {
+        if (selectedTags.has(tag)) {
+          selectedTags.delete(tag);
+          button.classList.remove('active');
+          button.setAttribute('aria-pressed', 'false');
+        } else {
+          selectedTags.add(tag);
+          button.classList.add('active');
+          button.setAttribute('aria-pressed', 'true');
+        }
+        updateVisibility();
+      }
+
+      filterButtons.forEach(btn => {
+        const tag = btn.getAttribute('data-tag');
+        btn.setAttribute('aria-pressed', 'false');
+        btn.addEventListener('click', () => toggleTag(tag, btn));
+      });
+
+      if (clearButton) {
+        clearButton.addEventListener('click', () => {
+          selectedTags.clear();
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
+          });
+          updateVisibility();
+        });
+      }
+
+      updateVisibility();
+    })();
+  </script>
 </body>
 </html>
