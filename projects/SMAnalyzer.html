@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Sentiment Analysis | Portfolio — Alejandro Lopez Ruiz</title>
+    <meta name="description" content="Marketing Social Media Analyzer — a multi-language social media NLP pipeline that scrapes Mastodon, translates posts, and runs sentiment, emotion, and toxicity analysis in a Streamlit dashboard. Built and deployed by Alejandro López Ruiz using Hugging Face, Docker, and Google Cloud Run." />
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Alejandro Lopez Ruiz</h1>
+            <p class="subtitle"> Data Science | AI | Analytics | Consultancy</p>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/#ai">AI / ML</a>
+                <a href="/#ds">Data Science & Analytics</a>
+                <a href="/#bi">Business Intelligence & Reports</a>
+                <a href="/#courses">Courses & Certifications</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container" style="margin-top:2rem;">
+        <nav class="breadcrumb">
+            <a href="/">Home</a> > <a href="/#ai">Projects</a> > <span aria-current="page">Marketing Social Media Analyzer</span>
+        </nav>
+        <section class="page-hero" aria-labelledby="msma-title">
+            <h1 id="msma-title">Marketing Social Media Analyzer</h1>
+            <p>
+                From keyword to insight: a social-media-powered NLP pipeline with translation, emotions, and BI-style analytics, designed and implemented end-to-end as a solo project.
+            </p>
+
+            <ul class="meta-list" style="display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem;">
+                <li><strong>Deployed</strong>· v2.5 (Cloud demo)</li>
+                <li><strong>Streamlit Dashboard</strong></li>
+                <li><strong>Solo project</strong></li>
+            </ul>
+
+            <p style="margin-top:0.8rem; display:flex; flex-wrap:wrap; gap:.5rem;">
+                <a class="btn" href="https://social-media-emotion-analysis-dashboard-phxhwfgrgfnzysytr8nhqc.streamlit.app/" target="_blank" rel="noopener">▶ Live Demo</a>
+                <a class="btn btn-outline" href="https://github.com/AlejLr/Social-Media-Emotion-Analysis-Dashboard" target="_blank" rel="noopener">GitHub Repo</a>
+                <a class="btn btn-outline" href="/#projects">← Back to Projects</a>
+            </p>
+        </section>
+
+        <section class="kpi-grid">
+            <div class="kpi">
+                <div class="label">Useful insight rate</div>
+                <div class="value">≈ 40-50% of fetched posts</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Translated share</div>
+                <div class="value">≈ 15-30% of posts</div>
+            </div>
+            <div class="kpi">
+                <div class="label">Languages detected</div>
+                <div class="value">&gt; 20 unique</div>
+            </div>
+            
+        </section>
+
+        <section class="card">
+            <h3>Project Overview</h3>
+            <p>
+                The Marketing Social Media Analyzer is a multi-language social listening dashboard built to support
+                marketing and strategy teams. It collects Mastodon posts for a given keyword, detects language,
+                translates when needed, runs sentiment, emotion, and toxicity models, and presents the results
+                in an interactive, BI-style Streamlit UI.
+            </p>
+            <p>
+                The project is intentionally product-shaped: it takes a vague task (“understand what people feel
+                about a topic”) and turns it into a repeatable workflow. It streamlines primary market research,
+                makes analysis nearly instantaneous once data is fetched, and is architected so that new models
+                or platforms (X, Reddit, Threads, LinkedIn) can be plugged in with minimal if any code changes.
+            </p>
+
+            <ul class="meta-list">
+                <li><strong>Target users:</strong> marketing analysts, brand teams, product owners.</li>
+                <li><strong>Goal:</strong> go from raw posts to actionable sentiment/emotion insights in a few clicks.</li>
+                <li><strong>Ownership:</strong> first long-form solo project — ideation, architecture, NLP, and UX done by me.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3> Cloud demo vs full local version</h3>
+            <p>
+                Running advanced multi-language NLP is expensive and slow to cold-start in the cloud. To balance
+                cost, reliability, and UX, the public demo is intentionally lightweight:
+            </p>
+                <ul class="meta-list">
+                <li><strong>Cloud demo:</strong> read-only exploration of fetched demo datasets (e.g. <code>demo_ai_300</code>, <code>demo_advanced_ai_300</code>, <code>demo_advanced_iphone_300</code>, <code>demo_advanced_microsoft_300</code>).</li>
+                <li><strong>Local full features:</strong> live scraping, translation, and heavy BERT models run on your own machine.</li>
+                <li><strong>Hybrid inference:</strong> the app prefers Hugging Face Inference API when a token is present and falls back to local models if not.</li>
+            </ul>
+            <p>
+                This design hendles pragmatic production trade-offs: the hosted demo showcases UX and the
+                pipeline, while the local version shows full engineering capability without incurring high API
+                or compute costs.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>How it works</h3>
+            <ol>
+                <li><strong>User configures a query:</strong> keyword (e.g. “AI”, “ChatGPT”, “iPhone”), number of posts (20-300), and minimum likes.</li>
+                <li><strong>Mastodon scraper</strong> pulls posts via the official API until the requested count is reached.</li>
+                <li><strong>Language detection & translation:</strong> <code>langdetect</code> tags the language; non-English text is translated to English via Helsinki-NLP (<code>Helsinki-NLP/opus-mt-mul-en</code>) using the Hugging Face Inference API, or a local model if no API token is provided.</li>
+                <li><strong>Baseline sentiment:</strong> VADER computes a fast sentiment score for every translated post.</li>
+                <li><strong>Advanced NLP (optional):</strong> BERT sentiment, emotion, and toxicity models enrich each post with higher-quality labels.</li>
+                <li><strong>Dashboard:</strong> a Streamlit app aggregates KPIs, distributions, and BI-style takeaways; everything remains fully interactive.</li>
+            </ol>
+            <ul class="meta-list">
+                <li><strong>Max posts per run:</strong> 300 (min 20). Demo datasets in the cloud were fetched using this maximum.</li>
+                <li><strong>Useful insight rate:</strong> roughly 40-50% of posts remain after cleaning and filtering.</li>
+                <li><strong>HF API impact:</strong> fetching and processing time reduced by roughly 60% compared to local-only runs (When CUDA not available in the local machine).</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>NLP models and resilience</h3>
+            <p>
+                The core of the analyzer is a modular NLP pipeline that can run either using the Hugging Face
+                Inference API or entirely locally. This makes the system resilient and accessible on a wide range
+                of machines.
+            </p>
+            <ul class="meta-list">
+                <li><strong>Language detection:</strong> <code>langdetect</code>.</li>
+                <li><strong>Translation:</strong> <code>Helsinki-NLP/opus-mt-mul-en</code> via HF Inference API, with a local translation pipeline fallback.</li>
+                <li><strong>Baseline sentiment:</strong> VADER (<code>vaderSentiment</code>).</li>
+                <li><strong>BERT sentiment:</strong> <code>cardiffnlp/twitter-roberta-base-sentiment-latest</code>.</li>
+                <li><strong>Emotions:</strong> <code>joeddav/distilbert-base-uncased-go-emotions-student</code>.</li>
+                <li><strong>Toxicity:</strong> <code>unitary/unbiased-toxic-roberta</code>.</li>
+            </ul>
+
+            <p>
+                All transformer models (translation, BERT sentiment, emotion, toxicity) are wired to use the
+                Hugging Face Inference API when a token is available, and fall back to local Hugging Face pipelines
+                otherwise. This keeps the demo cheap while guaranteeing that advanced analysis is still possible
+                offline or on CUDA/CPU. The use of the the local machine is also prefered when the Hugging Face account
+                counts with limited quota rates or low computation power.
+            </p>
+
+        </section>
+
+        <section class="card">
+            <h3>Dashboard and UX</h3>
+            <p>
+                The Streamlit dashboard is designed to feel like a lightweight BI tool rather than a raw model
+                demo. All views are interactive: filters adjust the KPIs, plots, and sample posts in real time.
+            </p>
+            <ul class="meta-list">
+                <li><strong>KPI panel:</strong> total posts (after cleaning), translated share, languages detected, toxicity rate, average sentiment.</li>
+                <li><strong>Sentiment distribution:</strong> positive/neutral/negative split, with both VADER and BERT-based sentiment.</li>
+                <li><strong>Language distribution:</strong> bar chart of detected languages and translation volume.</li>
+                <li><strong>Time series volume:</strong> volume of posts over time for temporal context.</li>
+                <li><strong>Toxicity overview:</strong> share of posts flagged toxic, top toxicity labels.</li>
+                <li><strong>Emotion breakdown:</strong> dominant emotions (e.g., joy, anger, fear, excitement) across posts.</li>
+                <li><strong>Top words & topics:</strong> frequency-based topic hints, with BERTopic-style modeling planned for v3.</li>
+                <li><strong>Sample posts:</strong> positive vs negative examples for qualitative reading.</li>
+                <li><strong>BI insights block:</strong> auto-generated takeaways summarizing the overall sentiment/emotion landscape.</li>
+            </ul>
+            <p class="muted">
+                Note: Streamlit's complex charts and tables are best viewed on desktop. Some mobile browsers
+                will not render the full dashboard correctly.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>What this project shows</h3>
+            <ul class="meta-list">
+                <li>End-to-end NLP product thinking: from idea and requirements to UX, models, and deployment.</li>
+                <li>Modular, scalable Python design that can absorb new models and platforms with minimal changes.</li>
+                <li>Data engineering skills: scraping, ETL, translation pipeline, caching, and schema design.</li>
+                <li>BI storytelling: turning raw sentiment/emotion outputs into high-level marketing insights.</li>
+                <li>Cloud deployment and pragmatic DX trade-offs (demo vs full local capabilities).</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Challenges and trade-offs</h3>
+            <ul class="meta-list">
+                <li><strong>API variability & rate limits:</strong> solved by resilient HF calls, retries, and local fallbacks when API use is not available or desirable.</li>
+                <li><strong>Cloud Computing costs:</strong> free or low cost tiers limited the demo's scalability and required careful resource management.</li>
+                <li><strong>Language & encoding edge cases:</strong> robust text cleaning (URL/hashtag removal, normalization) and conservative handling of unknown languages.</li>
+                <li><strong>Streamlit session problems:</strong> used a session-based architecture and static demo datasets in the cloud to avoid DB lag and state issues.</li>
+                <li><strong>Multi-model pipeline:</strong> unified BERT sentiment, emotions, and toxicity into a single, configurable enrichment function.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Future improvements (v3 and beyond)</h3>
+            <ul class="meta-list">
+                <li>GPU-backed deployment (GCP/AWS) for enabling real-time fetching.</li>
+                <li>Topic modelling (e.g., BERTopic) for automatic topic discovery.</li>
+                <li>Per-language or per-country breakdowns (when location metadata is available).</li>
+                <li>Exportable PDF / PPTX reports from BI takeaways.</li>
+                <li>Multi-platform support (X, Reddit, Threads, LinkedIn) when APIs are accessible.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Responsible use</h3>
+            <p>
+                The analyzer works on publicly available social media posts and is intended for aggregate,
+                high-level insight. The dashboard does not explicitly surface personal identifiers, and any
+                linked content reflects what authors chose to publish publicly. For real-world deployments,
+                this approach can be extended with stricter data retention, anonymization, and compliance
+                policies tailored to the organization.
+            </p>
+        </section>
+
+        <section class="card" aria-labelledby="msma-links">
+        <h3 id="msma-links">Links</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:.5rem;">
+            <a class="btn" href="https://social-media-emotion-analysis-dashboard-phxhwfgrgfnzysytr8nhqc.streamlit.app/" target="_blank" rel="noopener">▶ Live Demo</a>
+            <a class="btn btn-outline" href="https://github.com/AlejLr/Social-Media-Emotion-Analysis-Dashboard" target="_blank" rel="noopener">GitHub Repo</a>
+            <a class="btn btn-outline" href="/#projects">← Back to Projects</a>
+        </div>
+        <p class="muted" style="margin-top:.5rem;">Licensed under MIT.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Alejandro Lopez Ruiz — Built with HTML & CSS for GitHub Pages</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    </body>
+</html>
