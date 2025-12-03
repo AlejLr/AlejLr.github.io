@@ -3,101 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Dutch Housing Hedonic Pricing (1995–2000) | Portfolio</title>
+  <title>Dutch Housing Hedonic Pricing (1995-2000) | Portfolio</title>
   <link rel="stylesheet" href="/styles.css" />
-  <meta name="description" content="Econometrics portfolio project: Hedonic price model of Dutch housing transactions (1995–2000). Cleaned large dataset, engineered features, and built progressive OLS models with robust SEs." />
+  <meta name="description" content="Solo econometrics project: hedonic price model of Dutch housing transactions (1995-2000). Cleaned a large transaction dataset, engineered features, and built progressive OLS models with robust standard errors and fixed effects." />
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Alejandro López Ruiz</h1>
+      <h1>Alejandro Lopez Ruiz</h1>
       <p class="subtitle">Data Science | AI | Analytics | Consultancy</p>
       <nav>
         <a href="/">Home</a>
-        <a href="/#ai">AI / ML</a>
-        <a href="/#ds">Data Science & Analytics</a>
-        <a href="/#bi">BI & Reports</a>
-        <a href="/#courses">Courses</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#courses">Courses & Certifications</a>
         <a href="/#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main style="max-width:900px;margin:2rem auto;padding:0 1rem;">
+  <main style="max-width: 900px;margin: 2rem auto;padding: 0 1rem;">
     <div class="breadcrumbs">
-      <a href="/">Home</a> › <a href="/#ds">Projects</a> › Dutch Housing Hedonic Pricing
+      <a href="/">Home</a> > <a href="/#projects">Projects</a> > Dutch Housing Hedonic Pricing
     </div>
 
     <section class="page-hero">
-      <h1>Dutch Housing Hedonic Pricing (1995–2000)</h1>
+      <h1>Dutch Housing Hedonic Pricing (1995-2000)</h1>\
       <p>
-        Econometrics study quantifying how structure, location, and timing shape house prices
-        in the Netherlands. Built a progressive OLS framework to surface the most
-        decision-relevant drivers while balancing accuracy and interpretability.
+        Econometrics study of how structural, locational, and temporal attributes explain
+        house prices in the Netherlands. The project builds a progressive hedonic OLS framework
+        on a large transaction dataset, balancing statistical performance with economic interpretability.
       </p>
 
       <div class="kpi-grid">
         <div class="kpi">
-          <div class="label">Observations</div>
+          <div class="label">Raw dataset</div>
+          <div class="value">~630k transactions</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Final sample</div>
           <div class="value">~130k cleaned</div>
         </div>
         <div class="kpi">
-          <div class="label">Best interpretable model</div>
-          <div class="value">OLS — Model 4</div>
+          <div class="label">Model progression</div>
+          <div class="value">R² 0.45 -> 0.77</div>
         </div>
         <div class="kpi">
-          <div class="label">Fit (M4 / M5)</div>
-          <div class="value">R² ≈ 0.70 / 0.77</div>
+          <div class="label">Interpretation model</div>
+          <div class="value">OLS - Model 4 (R² ≈ 0.70)</div>
         </div>
         <div class="kpi">
-          <div class="label">Period</div>
-          <div class="value">1995–2000</div>
-        </div>
+          <div class="label">Project Outcome</div>
+          <div class="value">Final 9.0/10 (+ bonus)</div>
       </div>
 
-      <p style="margin-top:0.8rem;">
-        <a class="btn" href="https://github.com/AlejLr/Dutch-Housing-Hedonic-Prices" target="_blank" rel="noopener">View GitHub Repository</a>
-        <a class="btn-outline" href="/assets/reports/Report_Lopez_Ruiz_Alejandro_4075315.pdf" target="_blank" rel="noopener">Read Full Report (PDF)</a>
+      <p style="margin-top: 0.8rem;">
+        <a class="btn-outline" href="/assets/Report_Lopez_Ruiz_Alejandro.pdf" target="_blank" rel="noopener">
+          Read Full Report (PDF)
+        </a>
+        <a class="btn" href="/#projects">Back to projects</a>
       </p>
     </section>
 
     <section class="card">
-      <h3>What this shows</h3>
+      <h3>What this project shows</h3>
       <ul>
-        <li>Ability to **clean large real-estate datasets** and engineer meaningful features for valuation.</li>
-        <li>Sound **econometric modeling** with robust SEs and fixed effects for time/region.</li>
-        <li>Clear **model progression** (baseline → quality → location → temporal) to communicate trade-offs.</li>
-        <li>Well-structured **research deliverables** (reproducible code, figures, report).</li>
+        <li><strong>Hands-on experience with Stata</strong> on a large, real-world housing dataset (hundreds of thousands of transactions).</li>
+        <li><strong>End-to-end data preparation</strong>: outlier handling, log transformations, encoding of categorical variables, and construction of quality, spatial, and temporal features.</li>
+        <li><strong>Progressive model building</strong> from a simple structural baseline to richer specifications with quality, location, and time fixed effects.</li>
+        <li><strong>Clear economic interpretation</strong> of coefficients and model comparisons, grounded in the housing economics literature.</li>
+        <li><strong>High academic performance</strong>: graded 9.0/10 with an additional bonus point for the fixed-effects specification and interpretation.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h3>Executive highlights</h3>
+      <h3>Execution Highlights</h3>
       <ul>
-        <li><strong>Space & quality premiums:</strong> volume, plot size, rooms, and maintenance drive value.</li>
-        <li><strong>Location matters:</strong> urbanization and regional effects explain substantial variation.</li>
-        <li><strong>Market dynamics:</strong> longer time-on-market correlates with lower realized prices.</li>
-        <li><strong>Balanced choice:</strong> Model 4 used for interpretation (strong fit, transparent structure).</li>
+        <li>
+          <strong>Space & quality premiums:</strong> floor area, plot size, volume, number of rooms, and maintenance quality all have positive and highly significant effects on log price, with volume and maintenance standing out as particularly influential drivers.
+        </li>
+        <li>
+          <strong>Urbanization & region matter:</strong> more urban areas and provinces like Utrecht and Noord-Holland command higher price levels than less urban regions, consistent with agglomeration and accessibility effects.
+        </li>
+        <li>
+          <strong>Market dynamics:</strong> longer time-on-market (log duration) is associated with lower realized prices, while year dummies capture a steady late-1990s housing boom in the Netherlands.
+        </li>
+        <li>
+          <strong>Model choice:</strong> Model 4 is selected as the main interpretative model: it achieves strong explanatory power without relying on an excessive number of regional dummies, making it suitable for communicating results to non-technical stakeholders.
+        </li>
       </ul>
     </section>
 
     <section class="card">
-      <h3>How it was built (at a glance)</h3>
+      <h3>How it was built</h3>
       <ul class="meta-list">
-        <li>Data preparation: plausibility filters, percentile trimming, log transforms for skewed variables.</li>
-        <li>Modeling: OLS with robust SEs; fixed effects for year and region; incremental specifications.</li>
-        <li>Artifacts: figures, tables, and final report for rapid stakeholder review.</li>
+        <li>
+          <strong>Data preparation:</strong> log-transformations for skewed continuous variables (price, area, volume, plot size), trimming extreme outliers, and constructing composite variables such as maintenance quality and land intensity.
+        </li>
+        <li>
+          <strong>Variable design:</strong> structural attributes (size, rooms, home type), quality attributes (maintenance, sheds, land use), spatial context (urbanization, province dummies), and temporal dynamics (year and construction-period dummies, listing duration).
+        </li>
+        <li>
+          <strong>Model progression:</strong> five OLS specifications with robust standard errors, gradually adding quality, locational, and temporal blocks to quantify their incremental contribution to R² and to price formation.
+        </li>
+        <li>
+          <strong>Robustness & literature alignment:</strong> choices of transformations, variables, and fixed effects are motivated by classic hedonic pricing literature and recent Dutch housing studies, and checked via descriptive plots and residual behavior.
+        </li>
       </ul>
       <p style="margin-top:0.6rem;">
-        <a class="btn-outline" href="https://github.com/AlejLr/Dutch-Housing-Hedonic-Prices" target="_blank" rel="noopener">Code & outputs</a>
+        <em>
+          Code and do-files are not publicly shared at the request of the course coordinator,
+          but can be provided to recruiters on request.
+        </em>
       </p>
     </section>
 
     <section class="card">
       <h3>Limitations & next steps</h3>
       <ul class="meta-list">
-        <li>Neighborhood amenities and micro-spatial variation not directly observed.</li>
-        <li>Next: panel/spatial methods, environmental attributes, and richer accessibility data.</li>
+        <li>
+          <strong>Missing neighborhood detail:</strong> the model cannot directly capture micro-spatial features such as proximity to schools, transit, or environmental amenities, which likely explain part of the remaining variation.
+        </li>
+        <li>
+          <strong>Cross-sectional design:</strong> results are associative rather than causal; panel data and richer temporal information would allow stronger identification of long-run price dynamics and policy effects.
+        </li>
+        <li>
+          <strong>Selection effects:</strong> the dataset includes only completed transactions; future work could explicitly address potential selection bias from unsold or withdrawn listings.
+        </li>
+        <li>
+          <strong>Future extensions:</strong> integrate neighborhood-level and environmental indicators, explore spatial models, and test alternative functional forms (e.g. more flexible non-linear terms for land and plot size).
+        </li>
       </ul>
     </section>
   </main>
@@ -106,7 +140,7 @@
     <p>© <span id="year"></span> Alejandro Lopez Ruiz — Built with HTML & CSS for GitHub Pages</p>
   </footer>
   <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
