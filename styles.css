@@ -184,13 +184,6 @@ section {
   margin: 0.85rem 0 0;
 }
 
-.about-cta {
-  margin-top: 1rem;
-}
-
-.about-cta .btn-outline {
-  margin-right: 0;
-}
 
 h2 {
   border-bottom: 0;
@@ -555,17 +548,6 @@ footer {
   margin-right: auto;
 }
 
-.intro-line {
-  margin: 1.25rem auto 1.6rem;
-}
-
-.intro-line h2 {
-  margin: 0;
-}
-
-.intro-line h2::after {
-  display: none;
-}
 
 .contact-grid {
   display: grid;
